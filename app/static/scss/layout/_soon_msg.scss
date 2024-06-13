@@ -1,0 +1,19 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.soon-msg {
+    width: min(90%,120rem);
+    margin: 5rem auto;
+    h2 {
+        font-family: v.$font-inconsolata;
+        font-size: 5rem;
+        color: v.$guinda;
+        padding: 2rem;
+    }
+    p {
+        font-family: v.$font-PT;
+        font-size: 2rem;
+        color: #444;
+        padding: 2rem;
+    }
+}

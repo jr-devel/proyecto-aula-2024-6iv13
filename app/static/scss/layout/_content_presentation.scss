@@ -1,0 +1,35 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.content_presentation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 2.5rem;
+}
+
+.presentation {
+    width: min(70rem, 90%);
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 1rem 1rem .3rem #ccc;
+    h3 {
+        font-size: 5rem;
+        font-family: v.$font-roboto;
+        color: #800040;
+        border-bottom: .1rem solid #ddd;
+        padding-bottom: 1.5rem;
+    }
+    p {
+        font-family: v.$font-PT;
+        color: #333;
+        text-align: justify;
+        a {
+            color: #0b3ecc;
+        }
+    }
+}

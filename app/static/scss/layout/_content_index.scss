@@ -1,0 +1,114 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+main.index {
+    width: 100%;
+    margin: 0 auto;
+    .index-presentation {
+        width: 100%;
+    }
+    .index-data {
+        width: 90%;
+        margin: auto;
+        h3#index-title, h4#index-subtitle {
+            font-family: v.$font-inconsolata;
+            font-size: 4rem;
+            color: v.$guinda;
+            padding: 5rem 2rem 2rem 2rem;
+        }
+        h4#index-subtitle {
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: #888;
+            padding-top: 0;
+        }
+    }
+}
+
+.index-data .index-data-sections {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    @include m.tablet {
+        flex-direction: column;
+        justify-content: center;
+    }
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    a {
+        @include m.tablet {
+            display: block;
+            width: 100%;
+        }
+        font-family: v.$font-inconsolata;
+        font-size: 3rem;
+        color: #fff;
+        background-color: v.$guinda;
+        padding: 2rem;
+        transition: background ease .5s;
+        &:hover {
+            background-color: #000;
+        }
+    }
+}
+.index-articles {
+    width: 100%;
+    max-width: 140rem;
+    padding: 3rem;
+    margin: auto;
+    h3 {
+        // width: fit-content;
+        font-family: v.$font-inconsolata;
+        font-size: 4rem;
+        // color: v.$guinda;
+        color: #fff;
+        background-color: v.$guinda;
+        text-align: center;
+        // border-bottom: .4rem solid v.$guinda;
+        margin: 5rem 2rem;
+        padding: 2rem;
+        @include m.tablet {
+            font-size: 2.5rem;
+        }
+    }
+    .index-docs-items {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem;
+        a {
+            font-family: v.$font-inconsolata;
+            font-size: 3rem;
+            color: #fff;
+            background-color: v.$guinda;
+            padding: 2rem;
+            margin: 2rem;
+            transition: background ease .5s;
+            &:hover {
+                background-color: #000;
+            }
+        }
+    }
+    .index-certif-group, .index-seg-group {
+        background-color: transparent;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .index-certif-group-item, .index-seg-group-item {
+            width: 100%;
+            max-width: 40rem;
+            picture {
+                width: 100%;
+            }
+        }
+    }
+}

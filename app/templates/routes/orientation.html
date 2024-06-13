@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %} Orientación {% endblock %}
+
+{% block content %}
+<section class="main">
+    <div class="description">
+        <h3>¡Hola!</h3>
+        <p>
+            Bienvenid@s al  apartado de orientación vocacional del <b>CECyT 12</b>!, donde podrás aprender más sobre las carreras que ofrece el Centro de Estudios Cietíficos y 
+            Tecnológicos n° 12 ( CECyT 12 "José María Morelos" ). Además ofrecemos un test vocacional donde puedes poner a prueba tus cualidades
+            y así poder elegir la carrera que más te guste y que más se adapte a tus habilidades.
+        </p>
+    </div>
+    <div class="career">
+        <h3>Selección de Carreras</h3>
+        <div class="career__item">
+            <a href="/career/informatica" class="button informatica">
+                <span>Informática</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="career__item">
+            <a href="/career/administracion" class="button administracion">
+                <span>Administración</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="career__item">
+            <a href="career/contabilidad" class="button contabilidad">
+                <span>Contabilidad</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="career__item">
+            <a href="/career/marketing" class="button marketing">
+                <span>Marketing Digital</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="note">
+        <h3>Nota:</h3>
+        <p>
+            Para una mejor experiencia recomendamos realizar el test más de una vez en diferentes fechas, ya que las respuestas
+            pueden ser influenciadas por factores externos.
+        </p>
+    </div>
+</section>
+{% endblock%}
+
+{% block scripts %}
+{% endblock%}

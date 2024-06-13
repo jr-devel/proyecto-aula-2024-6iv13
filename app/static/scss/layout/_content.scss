@@ -1,0 +1,127 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+body {
+    background-image: url(../img/bg-pattern-greek.jpg);
+    background-repeat: repeat;
+    background-size: 50px;
+}
+
+.content {
+    width: 100%;
+    background-image: url(../img/bg-pattern-greek.jpg);
+    background-repeat: repeat;
+    background-size: 15rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 2.5rem;
+    margin: 0 auto;
+    .description {
+        background: #800040; 
+        width: min(90%, 120rem);
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+        box-shadow: 1rem 1rem .3rem #ccc;
+        h3 {
+            color: #fff;
+            font-family: v.$font-opensans;
+            font-weight: 700;
+            font-size: 5rem;
+        }
+        p {
+            color: #fff;
+            font-family: v.$font-PT;
+            font-size: 2rem;
+        }
+    }
+}
+.main .career {
+    width: min(90%,65rem);
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 1rem 1rem .3rem #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    h3 {
+        color: #333;
+        font-family: v.$font-roboto;
+        font-weight: 700;
+        font-size: 4rem;
+        text-align: center;
+    }
+    .career__item {
+        width: 100%;
+        a {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border: .4rem solid #333;
+            padding: 1rem 2rem;
+            border-radius: .7rem;
+            transition: all ease .5s;
+            &.informatica:hover {
+                border-color: #e9ac06;
+                span, i {
+                    color: #e9ac06;
+                }
+            }
+            &.administracion:hover {
+                border-color: #1a4ae6;
+                span, i {
+                    color: #1a4ae6;
+                }
+            }
+            &.contabilidad:hover {
+                border-color: #5eca1b;
+                span, i {
+                    color: #5eca1b;
+                }
+            }
+            &.marketing:hover {
+                border-color: #ec1111;
+                span, i {
+                    color: #ec1111;
+                }
+            }
+            span {
+                font-family: v.$font-inconsolata;
+                font-size: 3rem;
+                color: #333;
+                letter-spacing: .5rem;
+            }
+            i {
+                font-size: 3rem;
+                color: #333;
+            }
+        }
+    }
+}
+.note {
+    width: min(90%, 80rem);
+    padding: 2.5rem;
+    background: #222;
+    border-radius: 1.5rem;
+    box-shadow: 1rem 1rem .3rem #ccc;
+    h3 {
+        color: #fff;
+        font-family: v.$font-opensans;
+        font-weight: 700;
+        font-size: 4rem;
+    }
+    p {
+        font-size: 2rem;
+        color: #fff;
+    }
+}

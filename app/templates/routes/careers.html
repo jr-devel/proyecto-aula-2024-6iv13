@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %} Carreras {% endblock %}
+
+{% block content %}
+<div class="content_careers">
+    <div class="careers">
+        <h3>Selección de Carrera</h3>
+        <h5>Mira la Oferta Educativa que Ofrece el Plantel</h5>
+        <div class="careers-menu">
+            <div class="careers__item">
+                <picture>
+                    <img src="{{ url_for('static',filename='img/informatica.jpg') }}" alt="...">
+                </picture>
+                <h4>Informática</h4>
+                <p>
+                    {{ informatica_concept[:255] }}... <a href="/career/informatica">Ver más</a>
+                </p>
+            </div>
+            <div class="careers__item">
+                <picture>
+                    <img src="{{ url_for('static',filename='img/administracion.png') }}" alt="...">
+                </picture>
+                <h4>Administración</h4>
+                <p>
+                    {{ administracion_concept[:255] }}... <a href="/career/administracion">Ver más</a>
+                </p>
+            </div>
+            <div class="careers__item">
+                <picture>
+                    <img src="{{ url_for('static',filename='img/contabilidad.jpg') }}" alt="...">
+                </picture>
+                <h4>Contabilidad</h4>
+                <p>
+                    {{ contabilidad_concept[:255] }}... <a href="/career/contabilidad">Ver más</a>
+                </p>
+            </div>
+            <div class="careers__item">
+                <picture>
+                    <img src="{{ url_for('static',filename='img/marketing.jpg') }}" alt="...">
+                </picture>
+                <h4>Marketing Digital</h4>
+                <p>
+                    {{ marketing_concept[:255] }}... <a href="/career/marketing">Ver más</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

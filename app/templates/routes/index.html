@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block content %}
+<main class="index">
+    <article class="index-presentation">{% include 'carousel.html' %}</article>
+    <article class="index-data">
+        <h3 id="index-title">Centro de Estudios Científicos y Tecnológicos n° 12</h3>
+        <h4 id="index-subtitle">"José María Morelos"</h4>
+        <nav class="index-data-sections">
+            <a href="#certif">Certificaciones</a>
+            <a href="./community">Comunidad</a>
+            <a href="https://www.ipn.mx/daes/servicios/becas/" target="_blank">Becas</a>
+            <a href="#seg">Seguridad</a>
+            <a href="#docs">Documentos</a>
+        </nav>
+    </article>
+    <span id="certif"></span>
+    <article class="index-certif index-articles">
+        <h3>Certificación del Sistema de Gestión Integral del CECyT 12 "José María Morelos</h3>
+        <div class="index-certif-group">
+            <div class="index-certif-group-item">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/certif-1.jpg') }}">
+                    <img src="{{ url_for('static', filename='img/certif-1.jpg') }}" alt="Certificado 1">
+                </picture>
+            </div>
+            <div class="index-certif-group-item">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/certif-2.jpg') }}">
+                    <img src="{{ url_for('static', filename='img/certif-2.jpg') }}" alt="Certificado 2">
+                </picture>
+            </div>
+            <div class="index-certif-group-item">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/certif-3.jpg') }}">
+                    <img src="{{ url_for('static', filename='img/certif-3.jpg') }}" alt="Certificado 3">
+                </picture>
+            </div>
+        </div>
+    </article>
+    <span id="seg"></span>
+    <article class="index-seg index-articles">
+        <h3>Seguridad</h3>
+        <div class="index-seg-group">
+            <div class="index-seg-group-item">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/seg-1.jpg') }}">
+                    <img src="{{ url_for('static', filename='img/seg-1.jpg') }}" alt="Seguridad 1">
+                </picture>
+            </div>
+            <div class="index-seg-group-item">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/seg-2.jpg') }}">
+                    <img src="{{ url_for('static', filename='img/seg-2.jpg') }}" alt="Seguridad 2">
+                </picture>
+            </div>
+            <div class="index-seg-group-item">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/seg-3.jpg') }}">
+                    <img src="{{ url_for('static', filename='img/seg-3.jpg') }}" alt="Seguridad 3">
+                </picture>
+            </div>
+            <div class="index-seg-group-item">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='img/seg-4.jpg') }}">
+                    <img src="{{ url_for('static', filename='img/seg-4.jpg') }}" alt="Seguridad 4">
+                </picture>
+            </div>
+        </div>
+    </article>
+    <span id="docs"></span>
+    <article class="index-docs index-articles">
+        <h3>Documentos</h3>
+        <div class="index-docs-items">
+            <a title="Aviso de Privacidad" referrerpolicy="no-referrer" role="button" href="{{ url_for('static',filename='pdf/PR05-01-F05-AVISO-DE-PRIVACIDAD.pdf') }}"><i class="fas fa-bookmark"></i> Aviso de Privacidad</a>
+            <a title="Lineamientos Generales" referrerpolicy="no-referrer" role="button" href="{{ url_for('static',filename='pdf/PR05-01-F04-LINEAMIENTOS-GENERALES.pdf') }}"><i class="fas fa-book"></i> Lineamientos Generales</a>
+            <a title="Manual de Organización" referrerpolicy="no-referrer" role="button" href="{{ url_for('static',filename='pdf/MANUAL_ORGANIZACION_CECyT12.pdf') }}"><i class="fas fa-globe"></i> Manual de Organización</a>
+            <a title="Consejo Técnico Consultivo Escolar" referrerpolicy="no-referrer" role="button" href="https://www.cecyt12.ipn.mx/conocenos/consejo-tecnico.html"><i class="fas fa-question"></i> Consejo Técnico Consultivo Escolar</a>
+            <a title="Repositorio del Abogado General" referrerpolicy="no-referrer" role="button" href="https://www.ipn.mx/normatividad/"><i class="fas fa-gavel"></i> Repositorio del Abogado General</a>
+            <a title="Manual de Procedimientos" referrerpolicy="no-referrer" role="button" href="{{ url_for('static',filename='pdf/MP-CECyT12-2022-2.pdf') }}"><i class="fab fa-leanpub"></i> Manual de Procedimientos</a>
+        </div>
+    </article>
+</main>
+{% endblock %}

@@ -1,0 +1,85 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.content_contact {
+    width: 100%;
+    padding: 2.5rem;
+    .contact-form {
+        width: min(80rem, 90%);
+        background: #fff;
+        margin: 0 auto;
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+        box-shadow: 1rem 1rem .3rem #ccc;
+        h3 {
+            font-size: 5rem;
+            font-family: v.$font-roboto;
+            font-weight: 700;
+            color: #800040;
+            text-align: center;
+        }
+        p {
+            color: #333;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}
+
+.contact-form .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    label {
+        width: 100%;
+        margin: 0;
+        font-size: 3rem;
+        font-family: v.$font-opensans;
+        color: #333;
+    }
+    input, #input-message {
+        width: 100%;
+        margin: 0;
+        padding: 1.5rem;
+        // border-radius: .7rem;
+        border: none;
+        border-bottom: .4rem solid #800040;
+        font-family: v.$font-inconsolata;
+        font-size: 2rem;
+        text-align: center;
+        text-align-last: center;
+        &::placeholder {
+            font-family: v.$font-inconsolata;
+        }
+    }
+    #input-message {
+        max-width: 100%;
+        max-height: 25rem;
+    }
+}
+#submit {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+    gap: 2.5rem;
+    background: #800040;
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: .7rem;
+    span {
+        color: #fff;
+        font-family: v.$font-inconsolata;
+        font-size: 2.5rem;
+    }
+    i {
+        color: #fff;
+    }
+}
